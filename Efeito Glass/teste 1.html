@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .card-transparent {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        margin: 0 auto;
+        background: #f7f7f7;
+      }
+
+      .card-inner {
+        width: inherit;
+        height: inherit;
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+      }
+
+      .ball {
+        width: 200px;
+        height: 300px;
+        background-color: #940404;
+        opacity: 60%;
+        /* background-color: #ed1b24; */
+        /* background-color: #454545; */
+        /* background-color: #333333; */
+        /* border-radius: 50%; */
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        animation: move 3s ease-in infinite alternate-reverse;
+      }
+
+      /* @keyframes move {
+        to {
+          transform: translate(150px, 250px);
+        }
+      } */
+    </style>
+    <div class="card-transparent">
+      <div class="ball"></div>
+      <div class="card-inner"></div>
+    </div>
+  </body>
+</html>

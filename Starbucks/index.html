@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Starbucks</title>
+    </head>
+    <body>
+        <div class="circulo"></div>
+        <header>
+            <a class="logo"><img src="/Starbucks/assets/logo.png" alt=""></a>
+            <div class="menuHamburguer" onclick="alternatMenuHamburguer()"></div>
+            <nav class="navegacaoHamburguer">
+                <a href="#">Inicio</a>
+                <a href="#">Menu</a>
+                <a href="#">Novidades</a>
+                <a href="#">Contato</a>
+                <label for="switch">          
+                    <input type="checkbox" id="switch">Dark Mode</input>
+                </label>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <div class="caixaTexto">
+                <h2>It's not coffe<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="caixaImagem">
+                <img src="assets/img1.png" alt="" class="imagemProduto">
+            </div>
+            <ul class="thumb">
+                <li><img src="assets/thumb1.png" alt="" onclick="alterarImagemProduto('assets/img1.png');alterarCorCirculo('#017143')"></li>
+                <li><img src="assets/thumb2.png" alt="" onclick="alterarImagemProduto('assets/img2.png');alterarCorCirculo('#eb7495')"></li>
+                <li><img src="assets/thumb3.png" alt="" onclick="alterarImagemProduto('assets/img3.png');alterarCorCirculo('#d752b1')"></li>
+            </ul>
+            <ul class="redesSociais">
+                <li><a href="http://www.pradonet.com.br:8181/central/login.hhvm"><img src="assets/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/twitter.png" alt=""></a></li>
+            </ul>
+        </section>
+
+
+        <script src="scripts.js"></script>
+    </body>
+</html>

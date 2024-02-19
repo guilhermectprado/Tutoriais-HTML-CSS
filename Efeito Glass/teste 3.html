@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #181818;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: auto;
+      }
+
+      .blur {
+        position: absolute;
+        box-shadow: 200px 200px 2000px 80px #940404;
+        z-index: -1;
+      }
+
+      .blur-2 {
+        position: absolute;
+        box-shadow: 650px 600px 2000px 80px #940404;
+        z-index: -1;
+      }
+
+      .blur-3 {
+        position: absolute;
+        box-shadow: 1100px 300px 1000px 80px #040e94;
+        z-index: -1;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: azure;
+
+        background-color: rgba(247, 247, 247, 0.09);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .sidebar p {
+        margin: 1rem;
+      }
+      .teste {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: azure;
+
+        background: rgba(247, 247, 247, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(247, 247, 247, 0.3);
+      }
+      .teste p {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="blur"></span>
+      <span class="blur-2"></span>
+      <span class="blur-3"></span>
+
+      <div class="sidebar">
+        <p href="">TESTE 1</p>
+        <p href="">TESTE 2</p>
+        <p href="">TESTE 3</p>
+        <p href="">TESTE 4</p>
+      </div>
+      <div class="teste">
+        <p href="">TESTE 1</p>
+        <p href="">TESTE 2</p>
+        <p href="">TESTE 3</p>
+        <p href="">TESTE 4</p>
+      </div>
+      <div class="sidebar">
+        <p href="">TESTE 1</p>
+        <p href="">TESTE 2</p>
+        <p href="">TESTE 3</p>
+        <p href="">TESTE 4</p>
+      </div>
+      <div class="teste">
+        <p href="">TESTE 1</p>
+        <p href="">TESTE 2</p>
+        <p href="">TESTE 3</p>
+        <p href="">TESTE 4</p>
+      </div>
+    </div>
+  </body>
+</html>
