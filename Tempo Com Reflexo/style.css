@@ -9,7 +9,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
+  background: #222;
 }
 
 #clock h2 {
@@ -69,7 +70,7 @@ body {
   background: #ec0062;
 }
 
-#clock #time div:nth-last-child(1) span {
+/* #clock #time div:nth-last-child(1) span {
   position: absolute;
   bottom: 0;
   width: 60px;
@@ -78,4 +79,4 @@ body {
   background: #fff;
   color: #000;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-}
+} */

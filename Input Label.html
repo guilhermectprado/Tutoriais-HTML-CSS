@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horário Real com Reflexo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .form {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 150px;
+        background: #fff;
+      }
+
+      .form-item {
+        position: absolute;
+        margin-bottom: 15px;
+      }
+
+      .form-item input {
+        display: block;
+        width: 400px;
+        height: 40px;
+        background: transparent;
+        border: 1px solid #ccc;
+        transition: all .3s ease;
+        padding: 0 15px;
+      }
+
+      .form-item input:focus {
+        border-color: blue;
+      }
+
+      .form-item label {
+        position: absolute;
+        cursor: text;
+        z-index: 2;
+        top: 13px;
+        left: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        background: #fff;
+        padding: 0 10px;
+        color: #999;
+        transition: all .3s ease;
+      }
+
+      .form-item input:focus + label {
+        color: blue;
+      }
+
+      .form-item input:focus + label, 
+      .form-item input:valid + label {
+        font-size: 11px;
+        top: -5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <div class="form-item">
+        <input type="text" id="nome" autocomplete="off" required>
+        <label for="nome">Nome</label>
+      </div>
+    </div>
+  </body>
+</html>
