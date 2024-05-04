@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacao Typing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .typing {
+        margin-top: 50px;
+        text-align: center;
+        margin-left: 50px;
+        font-size: 1.2rem;
+
+        width: 358px; /*tamanho exato do texto*/
+        animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="typing">
+      <p>Aprendendo a fazer animação typing</p>
+    </div>
+  </body>
+</html>
