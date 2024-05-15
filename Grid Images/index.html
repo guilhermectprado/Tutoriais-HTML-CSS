@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .galeria > img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="galeria">
+      <img src="imagem-1.jpg" alt="" />
+      <img src="imagem-2.webp" alt="" />
+      <img src="imagem-3.jpg" alt="" />
+      <img src="imagem-4.jpg" alt="" />
+      <img src="imagem-5.jpeg" alt="" />
+      <img src="imagem-6.png" alt="" />
+      <img src="imagem-7.webp" alt="" />
+      <img src="imagem-8.jpg" alt="" />
+      <img src="imagem-9.jpg" alt="" />
+    </div>
+  </body>
+</html>
