@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        margin: 0;
+        padding: 4em;
+        box-sizing: border-box;
+      }
+
       .carousel {
         width: 100%;
         overflow-x: auto;
@@ -12,6 +18,7 @@
         display: flex;
         gap: 1em;
         scroll-behavior: smooth;
+        anchor-name: --carousel;
       }
 
       .carousel::-webkit-scrollbar {
@@ -30,10 +37,22 @@
         border-radius: 50%;
         padding-bottom: 0.1em;
         cursor: pointer;
+        position: fixed;
+        position-anchor: --carousel;
+        position-area: right center;
+        translate: -50%;
       }
 
       .carousel::scroll-button(left) {
         content: "←";
+        position-area: left center;
+        translate: 50%;
+      }
+
+      .carousel::scroll-button(right):disabled,
+      .carousel::scroll-button(left):disabled {
+        opacity: 0.5;
+        cursor: auto;
       }
 
       .card {
