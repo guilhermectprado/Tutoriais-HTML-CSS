@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .carousel {
+        width: 100%;
+        overflow-x: auto;
+        margin: 3em auto;
+        display: flex;
+        gap: 1em;
+        scroll-behavior: smooth;
+      }
+
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .carousel::scroll-button(right),
+      .carousel::scroll-button(left) {
+        content: "→";
+        border: none;
+        background-color: cadetblue;
+        font-size: 3em;
+        color: white;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        padding-bottom: 0.1em;
+        cursor: pointer;
+      }
+
+      .carousel::scroll-button(left) {
+        content: "←";
+      }
+
+      .card {
+        flex: 0 0 20em;
+        height: 12em;
+        background-color: bisque;
+        padding: 1em;
+        border-radius: 0.5em;
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>
