@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      .todo {
+        padding: 1.5em;
+        border-radius: 0.5em;
+        background-color: bisque;
+        opacity: 0;
+        transition: 600ms ease;
+      }
+
+      .todo.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li class="todo">Item 1</li>
+      <li class="todo">Item 2</li>
+      <li class="todo">Item 3</li>
+      <li class="todo">Item 4</li>
+      <li class="todo">Item 5</li>
+      <li class="todo">Item 6</li>
+      <li class="todo">Item 7</li>
+      <li class="todo">Item 8</li>
+      <li class="todo">Item 9</li>
+      <li class="todo">Item 10</li>
+      <li class="todo">Item 11</li>
+      <li class="todo">Item 12</li>
+      <li class="todo">Item 13</li>
+      <li class="todo">Item 14</li>
+      <li class="todo">Item 15</li>
+      <li class="todo">Item 16</li>
+      <li class="todo">Item 17</li>
+      <li class="todo">Item 18</li>
+      <li class="todo">Item 19</li>
+      <li class="todo">Item 20</li>
+    </ul>
+  </body>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      // const lastElement = entries[0];
+      // if (lastElement.isIntersecting) {
+      //   observer.unobserve(lastElement.target);
+      // }
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    }, {});
+
+    const todoElements = document.querySelectorAll(".todo");
+    todoElements.forEach((el) => observer.observe(el));
+  </script>
+</html>
