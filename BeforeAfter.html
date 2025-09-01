@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 4em;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        position: relative;
+        width: fit-content;
+        padding: 0.2em 0;
+      }
+
+      h1::before {
+        content: "";
+        background: linear-gradient(to right, lightblue, lightpink);
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+      }
+
+      h1::after {
+        content: "";
+        background: linear-gradient(to right, lightpink, lightblue);
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      h1:hover::before {
+        width: 100%;
+        background: linear-gradient(to right, lightskyblue, lightcoral);
+        transition: all 600ms ease-in;
+      }
+
+      h1:hover::after {
+        width: 100%;
+        background: linear-gradient(to right, lightcoral, lightskyblue);
+        transition: all 600ms ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Meu Título</h1>
+  </body>
+</html>
