@@ -5,6 +5,7 @@ const backgroundMusic = new Audio("musica-background.mp3");
 const jumpMusic = new Audio("musica-jump.mp3");
 const deadMusic = new Audio("musica-dead.mp3");
 backgroundMusic.play();
+backgroundMusic.loop = true;
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") jump();
