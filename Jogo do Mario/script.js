@@ -1,6 +1,10 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const buttonRetry = document.querySelector(".btn-game-over");
+const backgroundMusic = new Audio("musica-background.mp3");
+const jumpMusic = new Audio("musica-jump.mp3");
+const deadMusic = new Audio("musica-dead.mp3");
+backgroundMusic.play();
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") jump();
@@ -8,6 +12,8 @@ document.addEventListener("keydown", (event) => {
 
 const jump = () => {
   mario.classList.add("jump");
+
+  jumpMusic.play();
 
   setTimeout(() => {
     mario.classList.remove("jump");
@@ -30,6 +36,9 @@ const loop = setInterval(() => {
     mario.style.marginLeft = "50px";
 
     buttonRetry.style.visibility = "visible";
+
+    backgroundMusic.pause();
+    deadMusic.play();
 
     clearInterval(loop);
   }
